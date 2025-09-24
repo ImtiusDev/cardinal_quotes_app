@@ -13,7 +13,6 @@ class MedicineNoteScreen extends StatefulWidget {
 }
 
 class _TodoScreenState extends State<MedicineNoteScreen> {
-
   List<MedicineTodoModel> todos = MedicineTodoModel.getSoundCardsModel();
 
   @override
@@ -76,16 +75,34 @@ class _TodoScreenState extends State<MedicineNoteScreen> {
                 },
               ),
             ),
+
             Positioned(
               bottom: 30,
               right: 30,
               child: FloatingActionButton(
                 onPressed: () {
-                  showModalBottomSheet(
+                  showModalBottomSheet<void>(
+                    isScrollControlled: true,
                     context: context,
-                    backgroundColor: Colors.white,
+                    backgroundColor: AppColors.primaryWhite,
                     builder: (context) {
-                      return CustomBottomSheet();
+                      return Padding(
+                        padding: EdgeInsets.only(
+                          bottom: MediaQuery.of(context).viewInsets.bottom,
+                        ),
+                        child: DraggableScrollableSheet(
+                          expand: false,
+                          initialChildSize: 0.5,
+                          minChildSize: 0.3,
+                          maxChildSize: 0.9,
+                          builder: (context, scrollController) {
+                            return SingleChildScrollView(
+                              controller: scrollController,
+                              child: CustomBottomSheet(),
+                            );
+                          },
+                        ),
+                      );
                     },
                   );
                 },

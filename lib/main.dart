@@ -28,7 +28,6 @@ class _MyAppState extends State<MyApp> {
         textTheme: GoogleFonts.ralewayTextTheme(
           Theme.of(context).textTheme,
         ),
-        // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       
       onGenerateRoute: _appRouter.onGenerateRoute,
