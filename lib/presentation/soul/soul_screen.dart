@@ -10,10 +10,8 @@ class SoulScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.scaffoldBackground,
       body: Center(
-        child: Container(
-          child: Text('Soul Screen',
-            style: AppTextSyle.heading4SemiBold(AppColors.primaryWhite),
-          ),
+        child: Text('Soul Screen',
+          style: AppTextSyle.heading4SemiBold(AppColors.primaryWhite),
         ),
       ),
     );

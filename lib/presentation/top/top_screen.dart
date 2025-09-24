@@ -23,11 +23,9 @@ class TopScreen extends StatelessWidget {
 
       backgroundColor: AppColors.scaffoldBackground,
       body: Center(
-        child: Container(
-          child: Text(
-            'Top Screen',
-            style: AppTextSyle.heading4SemiBold(AppColors.primaryWhite),
-          ),
+        child: Text(
+          'Top Screen',
+          style: AppTextSyle.heading4SemiBold(AppColors.primaryWhite),
         ),
       ),
     );

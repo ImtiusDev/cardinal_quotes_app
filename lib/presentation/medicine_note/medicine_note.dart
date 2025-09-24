@@ -109,6 +109,8 @@ class _TodoScreenState extends State<MedicineNoteScreen> {
                 child: Icon(Icons.add_task_outlined),
               ),
             ),
+
+            Container(),
           ],
         ),
       ),

@@ -54,10 +54,10 @@ class PasswordTextField extends StatefulWidget {
   });
 
   @override
-  _PasswordTextFieldState createState() => _PasswordTextFieldState();
+  PasswordTextFieldState createState() => PasswordTextFieldState();
 }
 
-class _PasswordTextFieldState extends State<PasswordTextField> {
+class PasswordTextFieldState extends State<PasswordTextField> {
   bool _obscureText = true;
 
   void _toggleVisibility() {
